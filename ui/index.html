@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' file: https: data:; style-src 'self' 'unsafe-inline'">
+  <title>Game Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bg"><div class="layer"></div><div class="layer"></div></div>
+  <div id="shade"></div>
+
+  <header>
+    <div class="brand"><span class="dot"></span>LIBRARY</div>
+    <nav>
+      <button data-act="add" title="Add games">＋ Add</button>
+      <button data-act="folder" title="Open games folder">Folder</button>
+      <button data-act="fullscreen" title="Fullscreen (F11)">⛶</button>
+      <button data-act="quit" title="Exit">✕</button>
+    </nav>
+    <div id="clock"></div>
+  </header>
+
+  <section id="hero">
+    <img id="hero-logo" alt="">
+    <h1 id="hero-title"></h1>
+    <div id="hero-meta"></div>
+    <div class="hero-actions">
+      <button id="play" class="play"><span>▶</span> PLAY</button>
+      <button id="options" class="ghost">⋯</button>
+    </div>
+  </section>
+
+  <main id="grid"></main>
+
+  <div id="empty" hidden>
+    <h2>Your library is empty</h2>
+    <p>Drop game shortcuts or .exe files onto this window,<br>or put them into the <b>games</b> folder.</p>
+    <button data-act="add" class="play">＋ Add games</button>
+  </div>
+
+  <footer>
+    <span><kbd>A</kbd><kbd>Enter</kbd> Play</span>
+    <span><kbd>Y</kbd><kbd>Tab</kbd> Options</span>
+    <span><kbd>B</kbd><kbd>Esc</kbd> Back</span>
+    <span>Type to search</span>
+  </footer>
+
+  <div id="search-pill" hidden></div>
+
+  <div id="modal" hidden>
+    <div class="panel">
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" hidden></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
